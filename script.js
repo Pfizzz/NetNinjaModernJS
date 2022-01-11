@@ -168,12 +168,69 @@
 //     return total;
 // }
 
-const bill = (products, tax) => {
-  let total = 0;
-  for (let i = 0; i < products.length; i++) {
-    total += products[i] + products[i] * tax;
-  }
-  return total;
-};
+// const bill = (products, tax) => {
+//   let total = 0;
+//   for (let i = 0; i < products.length; i++) {
+//     total += products[i] + products[i] * tax;
+//   }
+//   return total;
+// };
 
-console.log(bill([10, 15, 30], 0.2));
+// console.log(bill([10, 15, 30], 0.2));
+
+//FUNCTIONS VS METHODS
+// const name = 'mario';
+// const greet = () => "hello";
+
+// console.log(greet());
+
+// let result = name.toUpperCase();
+// console.log(result);
+
+//CALLBACKS AND FOREACH
+
+// const myFunc = (callbackFunc) => {
+//     // do something
+//     let value = 50;
+//     callbackFunc(value);
+// };
+
+// // myFunc(function(value){
+// //     // do something
+// //     console.log(value);
+// // });
+
+// // converted to arrow function
+// myFunc(value => {
+//     console.log(value);
+// })
+
+
+//FOR EACH
+
+// let people = ['ryu', 'chun-li', 'mario', 'luigi'];
+
+// const logPerson = (person, index) => {
+//     console.log(`${index}, hello ${person}`)
+// }
+
+// people.forEach(logPerson);
+
+// let dogs = ['chester', 'nova', 'layla', 'bruno'];
+// const logDog = (dog, index) => {
+//     console.log(`${index} We love ${dog}`)
+// }
+
+// dogs.forEach(logDog);
+const ul = document.querySelector('.people');
+const people = ['ryu', 'chun-li', 'mario', 'luigi'];
+let html = ``;
+
+
+people.forEach(person => {
+    html += `<li style="color: purple">${person}</li>`;
+
+});
+
+console.log(html);
+ul.innerHTML = html; 
